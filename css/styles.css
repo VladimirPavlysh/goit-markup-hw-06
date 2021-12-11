@@ -14,6 +14,7 @@
 --header-border-color: #ececec;
 --secondary-logo-color: #000000;
 --border-color: #eeeeee;
+--batton-hover-color: #188ce8;
 
 --cubic: cubic-bezier(0.4, 0, 0.2, 1);
 --transition-time: 250ms;}
@@ -66,13 +67,6 @@ letter-spacing: 0.03em;
 .button {
     font-family: inherit;
     cursor: pointer;
-    transition: color var(--transition-time) var(--cubic),
-    background-color var(--transition-time) var(--cubic);
-}
-.button:hover,
-.button:focus {
-color: var(--primary-white-color);
-background-color: var(--acent-color);
 }
 .container {
     width: 1170px;
@@ -246,6 +240,7 @@ fill: var(--acent-color);
     background-color: var(--accent-background);
     padding-top: 200px;
     padding-bottom: 200px;
+    
 }
 
 .hero-title {
@@ -273,6 +268,13 @@ fill: var(--acent-color);
     cursor: pointer;
     background-color: var(--acent-color);
     color: var(--primary-white-color);
+    transition: background-color var(--transition-time) var(--cubic);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border: none;
+}
+.button-hero:hover,
+.button-hero:focus {
+    background-color: var(--batton-hover-color);
 }
 /* Peculiarities */
 .benefits-title {
@@ -619,8 +621,8 @@ margin-left: 30px;
 }
 /* ----Window subscribe------- */
 
-.subscribe-block{
-
+.subscribe-form-window{
+    display: flex;
 }
 .subscribe-title{
     font-style: 700;
@@ -633,7 +635,7 @@ margin-left: 30px;
     
 }
 .subscribe-input{
-    width: 350px;
+    width: 358px;
     height: 50px;
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -642,34 +644,50 @@ margin-left: 30px;
     padding-bottom: 15px;
     border-radius: 4px;
     color: var(--primary-white-color);
-    transition: box-shadow var(--transition-time) var(--cubic);
+    transition: border-color var(--transition-time) var(--cubic);
+    outline: none;
+    cursor: pointer;
     
 }
-.subscribe-input:focus,
-.subscribe-input:hover{
-    box-shadow:  0px 4px 4px rgba(0, 0, 0, 0, 15);
-
+.subscribe-input:focus{
+    border-color: var(--acent-color);
 }
+.subscribe-input:focus::placeholder {
+    color: var(--primary-white-color);
+}
+
 .subscribe-input::placeholder {
     color: rgba(255, 255, 255, 0.6);
     font-style: 400;
     font-size: 16px;
     line-height: 1.25;
     align-items: center;
+    transition: color var(--transition-time) var(--cubic);
 }
 .subscribe-button{
     margin-left: 12px;
     background-color: var(--acent-color);
     color: var(--primary-white-color);
     border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     padding: 10px 28px 10px 29px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: background-color var(--transition-time) var(--cubic);
 }
 
+
+.subscribe-button:focus,
+.subscribe-button:hover{
+    background-color: var(--batton-hover-color);
+}
+.subscribe-icon{
+    margin-left: 10px;
+    fill: var(--primary-white-color);
+}
 /* Portfolio */
 
 .item-filters:not(:first-child) {
