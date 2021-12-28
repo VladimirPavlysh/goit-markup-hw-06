@@ -190,6 +190,7 @@ color: var(--acent-color);}
 }
 .item-direction {
     margin-right: 50px;
+    color: var(--title-text-color);
 }
 .item-direction:last-child {
     margin-right: 0;
